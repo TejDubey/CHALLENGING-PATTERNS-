@@ -1,2 +1,2 @@
 # CHALLENGING-PATTERNS-
-Complex patterns before starting DSA.
+Patterns in C language.
