@@ -1,0 +1,481 @@
+// MASTERING PATTERNS 
+// Striver's A2Z DSA Course
+
+#include <stdio.h>
+int main() {
+    int n;
+    scanf("%d",&n);
+    //1. 
+    // * * * * 
+    // * * * * 
+    // * * * * 
+    // * * * * 
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n;j++){
+    //         printf("* ");
+    //     }
+    //     printf("\n");
+    // }
+    //2.
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("* ");
+    //     }
+    //      k++;
+    //      printf("\n");
+    // }
+    //3.
+    // 1 
+    // 1 2 
+    // 1 2 3 
+    // 1 2 3 4 
+    // 1 2 3 4 5 
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     int z=1;
+    //     for(int j=0;j<k;j++){
+    //         printf("%d ",z);
+    //         z++;
+    //     }
+    //      k++;
+    //      printf("\n");
+    // }
+    //4.
+    // 1 
+    // 2 2 
+    // 3 3 3 
+    // 4 4 4 4 
+    // 5 5 5 5 5 
+    // int k=1;
+    // int z=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("%d ",z);
+    //     }
+    //      k++;
+    //      z++;
+    //      printf("\n");
+    // }
+    //5.
+    // * * * * * 
+    // * * * * 
+    // * * * 
+    // * * 
+    // * 
+    // int k=n;
+    // for(int i=0;i<n;i++){
+    //     for(int j=k-1;j>=0;j--){
+    //         printf("* ");
+    //     }
+    //      k--;
+    //      printf("\n");
+    // }
+    // return 0;
+    //6.
+    // 1 2 3 4 5 
+    // 1 2 3 4 
+    // 1 2 3 
+    // 1 2 
+    // 1
+    // int k=n;
+    // for(int i=0;i<n;i++){
+    //     int z=1;
+    //     for(int j=k-1;j>=0;j--){
+    //         printf("%d ",z);
+    //         z++;
+    //     }
+    //      k--;
+    //      printf("\n");
+    // }
+    //7.
+    /*
+             *
+            ***     
+           *****    
+          *******   
+         *********  
+        *********** 
+    */
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n-i-1;j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<2*i+1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=i;j<n;j++){
+    //         printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    //8.
+    // *********** 
+    //  *********  
+    //   *******   
+    //   *****    
+    //     ***     
+    //      *  
+    // for(int i=n-1;i>=0;i--){
+    //     for(int j=0;j<n-i-1;j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<2*i+1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=i;j<n;j++){
+    //         printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    //9.
+    //      *      
+    //     ***     
+    //    *****    
+    //   *******   
+    //  *********  
+    // *********** 
+    // *********** 
+    //  *********  
+    //   *******   
+    //    *****    
+    //     ***     
+    //      * 
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n-i-1;j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<2*i+1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=i;j<n;j++){
+    //         printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    // for(int i=n-1;i>=0;i--){
+    //     for(int j=0;j<n-i-1;j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<2*i+1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=i;j<n;j++){
+    //         printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    //10.
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // ****
+    // ***
+    // **
+    // *
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("*");
+    //     }
+    //     k++;
+    //     printf("\n");
+    // }
+    // k-=2;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("*");
+    //     }
+    //     k--;
+    //     printf("\n");
+    // }
+    //11.
+    // 1
+    // 01
+    // 101
+    // 0101
+    // 10101
+    // 010101
+    // 1010101
+    // int k=1;
+    // int m;
+    // for(int i=0;i<n;i++){
+    //     if(i%2==0) m=0;
+    //     else m=1;
+    //     for(int j=0;j<k;j++){
+    //         if(m%2==0) printf("1");
+    //         else printf("0");
+    //         m++;
+    //     }
+    //     k++;
+    //     printf("\n");
+    // }
+    //12.
+    // 1          1
+    // 12        21
+    // 123      321
+    // 1234    4321
+    // 12345  54321
+    // 123456654321
+    // int k1=1;
+    // int k2=1;
+    // for(int i=0;i<n;i++){
+    //     int z1=1;
+    //     for(int j=0;j<k1;j++){
+    //         printf("%d",z1);
+    //         z1++;
+    //     }
+    //     for(int j=0;j<2*n-2*(i+1);j++){
+    //         printf(" ");
+    //     }
+    //     int z2=z1-1;
+    //     for(int j=0;j<k2;j++){
+    //         printf("%d",z2);
+    //         z2--;
+    //     }
+    //     k1++;
+    //     k2++;
+    //     printf("\n");
+    // }
+    //13.
+    // 1
+    // 2 3
+    // 4 5 6
+    // 7 8 9 10
+    // int z=1;
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("%d ",z);
+    //         z++;
+    //     }
+    //     k++;
+    //     printf("\n");
+    // }
+    //14.
+    // A
+    // AB
+    // ABC
+    // ABCD
+    // ABCDE
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     char c='A';
+    //     for(int j=0;j<k;j++){
+    //         printf("%c",c);
+    //         c++;
+    //     }
+    //     k++;
+    //     printf("\n");
+    // }
+    //15.
+    // ABCDE
+    // ABCD
+    // ABC
+    // AB
+    // A
+    // int k=n;
+    // for(int i=0;i<n;i++){
+    //     char c='A';
+    //     for(int j=0;j<k;j++){
+    //         printf("%c",c);
+    //         c++;
+    //     }
+    //     k--;
+    //     printf("\n");
+    // }
+    //16.
+    // A
+    // BB
+    // CCC
+    // DDDD
+    // EEEEE
+    // int k=1;
+    // char c='A';
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k;j++){
+    //         printf("%c",c);
+    //         //c++; A BC DEF GHIJ
+    //     }
+    //     c++;
+    //     k++;
+    //     printf("\n");
+    // }
+    //17.
+    //     A     
+    //   ABA    
+    //   ABCBA   
+    //  ABCDCBA  
+    // ABCDEDCBA 
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n-i-1;j++){
+    //         printf(" ");
+    //     }
+    //     char z='A';
+    //     for(int j=0;j<=(2*i+1)/2;j++){
+    //         printf("%c",z);
+    //         z++;
+    //     }
+    //     z-=2;
+    //     for(int j=((2*i+1)/2)+1;j<(2*i+1);j++){
+    //         printf("%c",z);
+    //         z--;
+    //     }
+    //     for(int j=i;j<n;j++){
+    //         printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    //18.
+    // E
+    // DE
+    // CDE
+    // BCDE
+    // ABCDE
+    // int k=1;
+    // for(int i=0;i<n;i++){
+    //     char c='A'+n-i-1;
+    //     for(int j=0;j<k;j++){
+    //         printf("%c",c);
+    //         c++;
+    //     }
+    //     k++;
+    //     printf("\n");
+    // }
+    //19.
+    // **************
+    // ******  ******
+    // *****    *****
+    // ****      ****
+    // ***        ***
+    // **          **
+    // *            *
+    // *            *
+    // **          **
+    // ***        ***
+    // ****      ****
+    // *****    *****
+    // ******  ******
+    // **************
+    // int k1=n;
+    // for(int i=n-1;i>=0;i--){
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=0;j<2*n-2*(i+1);j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     k1--;
+    //     printf("\n");
+    // }
+    // k1=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=0;j<2*n-2*(i+1);j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     k1++;
+    //     printf("\n");
+    // }
+    //20.
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    // int k1=1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=0;j<2*n-2*(i+1);j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     k1++;
+    //     printf("\n");
+    // }
+    // k1=n;
+    // for(int i=n-1;i>=0;i--){
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     for(int j=0;j<2*n-2*(i+1);j++){
+    //         printf(" ");
+    //     }
+    //     for(int j=0;j<k1;j++){
+    //         printf("*");
+    //     }
+    //     k1--;
+    //     printf("\n");
+    // }
+    //21.
+    // *****
+    // *   *
+    // *   *
+    // *   *
+    // *****
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n;j++){
+    //         if(i==0 || i==n-1 || j==0 || j==n-1) printf("*");
+    //         else printf(" ");
+    //     }
+    //     printf("\n");
+    // }
+    //22.
+    // *****
+    // *   *
+    // *   *
+    // *   *
+    // *****
+    // int k=n-1;
+    // for(int i=0;i<n;i++){
+    //     for(int j=0;j<n;j++){
+            
+    //     }
+    //     printf("\n");
+    // }
+    //23.
+    // 4444444
+    // 4333334
+    // 4322234
+    // 4321234
+    // 4322234
+    // 4333334
+    // 4444444
+    // int min(int a, int b){
+    //     return (a<b?a:b);
+    // }
+    // for(int i=0;i<2*n-1;i++){
+    //     for(int j=0;j<2*n-1;j++){
+    //         int l=i;
+    //         int t=j;
+    //         int b=2*n-2-i;
+    //         int r=2*n-2-j;
+    //         printf("%d",n-min(min(t,b),min(l,r)));
+    //     }
+    //     printf("\n");
+    // }
+}
